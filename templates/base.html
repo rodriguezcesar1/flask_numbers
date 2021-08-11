@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %}</title>
+    </head>
+
+    <body>
+        <form action="{{url_for('handle_data')}}" method="post">
+            <div class ="form-group">
+                <label for="num">Flask Number Generator</label>
+                <input type="text" name="num"
+                    placeholder="Enter a positive integer..." class="form-control"></input>
+            </div>
+
+            <div class="form-group">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="options" value = "all" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">all numbers</label>
+                  </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="options" value = "odd" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">odd</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline3" name="options" value="even" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline3">even</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline4" name="options" value="prime" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline4">prime</label>
+                  </div>    
+            </div>
+            
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+        </form>
+        <div class="container">
+            {% block content %} {% endblock %}
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
