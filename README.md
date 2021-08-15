@@ -1,8 +1,8 @@
 # flask_numbers
 
 initialize database: \
-`python init_db.py` \
-\
+`python init_db.py` 
+
 
 build with command: \
 `docker build -t gen-nums .` \
